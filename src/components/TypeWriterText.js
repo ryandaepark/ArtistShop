@@ -12,9 +12,8 @@ const Title = styled.h2`
 font-family: 'Caveat Variable', sans-serif;
 font-size: ${props => props.theme.fontxxxl};
 text-transform: capitalize;
-width: 80%;
-align-self: flex-start;
-
+text-self: center;
+padding-bottom: 1rem;
 span{
   font-family: 'Caveat Variable', sans-serif;
   color: black;
@@ -31,8 +30,8 @@ text-transform: capitalize;
 color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
 font-weight: 600;
 margin-bottom: 1rem;
-width: 80%;
-align-self: flex-start;
+text-self: center;
+padding-bottom: 2rem;
 `
 
 //ButtonContainer
@@ -47,8 +46,8 @@ const TypeWriterText = () => {
   return (
     <>
       <Title>
-      Welcome to our cafe blog.
-      <Typewriter
+      Elijah LastName
+      {/* <Typewriter
         options={{
           autoStart: true,
           loop: true,
@@ -63,12 +62,12 @@ const TypeWriterText = () => {
             .deleteAll()
             .start();
         }}
-      />
+      /> */}
     </Title> 
-    <SubTitle> Want to stay updated? Make an account with us today! </SubTitle>
-    <ButtonContainer>
+    <SubTitle> "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt consequatur quisquam maxime molestias dolores ipsum, exercitationem vel sint quidem aliquam modi quis impedit corporis unde inventore fugiat provident in." </SubTitle>
+    {/* <ButtonContainer>
       <Button text ="Explore" link="#about" />
-    </ButtonContainer>
+    </ButtonContainer> */}
     </>
   );
 };

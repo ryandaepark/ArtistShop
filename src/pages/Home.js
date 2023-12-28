@@ -2,14 +2,13 @@ import { React } from "react";
 import styled, { keyframes } from 'styled-components'
 import TypeWriterText from '../components/TypeWriterText'
 import CoffeeBanner from '../RyanAssets/man-serving-cup-coffee.jpg'
-
+import Carousel from '../components/Carousel'
 
 //Section
 //min-height : This is calculating spacing per window size before scroll
 const Section = styled.section`
 min-height: ${props => `calc(100vh - ${props.theme.navHeight})`};
 width: 100vw;
-position: relative;
 background-color: ${props => props.theme.body};
 `
 
@@ -23,14 +22,15 @@ background-color: ${props => props.theme.body};
 //justify-content: center: makes it centered horizontally
 //align-items: center: makes it centered vertically
 const Container = styled.div`
-width: 75%;
 min-height: 80vh;
-margin: 0 auto;
-/* background-color: lightblue; */
 
-display: flex;
+display: flex-column;
 justify-content: center;
 align-items: center;
+text-align: center;
+margin: auto;
+width: 50%;
+padding: 10px;
 `
 
 //Box
@@ -39,78 +39,77 @@ align-items: center;
 const Box = styled.div`
 width: 50%;
 height: 100%;
-display: flex;
+${'' /* display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center;
+align-items: center; */}
 `
 
-//rotate : rotating image for below "Round" 
-const rotate = keyframes`
-100%{
-  transform: rotate(1turn);
-}
-`
+// //rotate : rotating image for below "Round" 
+// const rotate = keyframes`
+// 100%{
+//   transform: rotate(1turn);
+// }
+// `
 
-//Round
-//position: absolute: places at center of screen
-//height: auto; sets it to the size that makes it visible
-//bottom-height brings it to the bottom left corner
-//border + border-radius: creates the 1px circle around the rotating img
-const Round = styled.div`
-position: absolute;
-bottom: 2rem;
-right: 90%;
-width: 6rem;
-height: 6rem;
-border: 1px solid ${props => props.theme.text};
-border-radius: 50%;
+// //Round
+// //position: absolute: places at center of screen
+// //height: auto; sets it to the size that makes it visible
+// //bottom-height brings it to the bottom left corner
+// //border + border-radius: creates the 1px circle around the rotating img
+// const Round = styled.div`
+// position: absolute;
+// bottom: 2rem;
+// right: 90%;
+// width: 6rem;
+// height: 6rem;
+// border: 1px solid ${props => props.theme.text};
+// border-radius: 50%;
 
-img{
-  width:100%;
-  height: auto;
-  animation: ${rotate} 6s linear infinite reverse;
-}
-`
+// img{
+//   width:100%;
+//   height: auto;
+//   animation: ${rotate} 6s linear infinite reverse;
+// }
+// `
 
-//Circle -> creating circle around the arrow and placing inside the 
-//          RoundTextBlack circle
-const Circle = styled.span`
-width: 3rem;
-height: 3rem;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 50%;
+// //Circle -> creating circle around the arrow and placing inside the 
+// //          RoundTextBlack circle
+// const Circle = styled.span`
+// width: 3rem;
+// height: 3rem;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// border-radius: 50%;
 
-position: absolute;
-top:50%;
-left: 50%;
-transform: translate(-50%, -50%);
+// position: absolute;
+// top:50%;
+// left: 50%;
+// transform: translate(-50%, -50%);
 
-background-color: ${props => props.theme.text};
-color: ${props => props.theme.body};
-font-size: 1.5rem;
-`
+// background-color: ${props => props.theme.text};
+// color: ${props => props.theme.body};
+// font-size: 1.5rem;
+// `
 
-const ImageContainer = styled.span`
-top: 2rem;
-width: 70%;
-height: auto;
-padding-top: 1em;
-`
+// const ImageContainer = styled.span`
+// top: 2rem;
+// width: 70%;
+// height: auto;
+// padding-top: 1em;
+// `
 
 const Home = () => {
   return (
     <Section>
       <Container>
-        <Box> <TypeWriterText /> </Box>
-
-        <Box> 
-          <ImageContainer> 
-            <img src={CoffeeBanner} class="rounded-lg"/> 
-          </ImageContainer> 
-        </Box>
+        {/* <Box> <TypeWriterText /> </Box> */}
+        <TypeWriterText />
+        <Carousel/> 
+        {/* <Box> 
+          <Carousel/> 
+        </Box> */}
 
       </Container>
     </Section>

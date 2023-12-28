@@ -8,18 +8,9 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation, Autoplay, EffectCards } from "swiper";
 
-// import img1 from '../assets/Nfts/bighead.svg';
-// import img2 from '../assets/Nfts/bighead-1.svg';
-// import img3 from '../assets/Nfts/bighead-2.svg';
-// import img4 from '../assets/Nfts/bighead-3.svg';
-// import img5 from '../assets/Nfts/bighead-4.svg';
-// import img6 from '../assets/Nfts/bighead-5.svg';
-// import img7 from '../assets/Nfts/bighead-6.svg';
-// import img8 from '../assets/Nfts/bighead-7.svg';
-// import img9 from '../assets/Nfts/bighead-8.svg';
-// import img10 from '../assets/Nfts/bighead-9.svg';
+import img1 from '../RyanAssets/Cover.png';
 
-// import Arrow from '../assets/Arrow.svg';
+
 
 //Container
 //.swiper: + .swiper-slide: positions the slide and rounds square cards
@@ -27,8 +18,7 @@ import { Pagination, Navigation, Autoplay, EffectCards } from "swiper";
 //      Note: top: 60% makes arrows go lower
 //      Note: &:after: removes the old arrows
 const Container = styled.div`
-width: 25vw;
-height: 70vh;
+height: 60vh;
 
 .swiper{
     width: 100%;
@@ -36,43 +26,15 @@ height: 70vh;
 }
 
 .swiper-slide{
-  background-color: ${props => props.theme.carouselColor};
+  background-color: white;
   border-radius: 20px;
-
+  border: 1px solid grey;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.swiper-button-next{
-  color: ${props => props.theme.text};
-  right: 0;
-  top: 60%;
-
-  width: 4rem;
-
-  ${'' /* background-image: url(${Arrow}); */}
-  background-position: center;
-  background-size: cover;
-
-  &:after{
-    display:none;
-  }
-}
-
-.swiper-button-prev{
-  color: ${props => props.theme.text};
-  left: 0;
-  top: 60%;
-  width: 4rem;
-  transform: rotate(180deg);
-  ${'' /* background-image: url(${Arrow}); */}
-  background-position: center;
-  background-size: cover;
-
-  &:after{
-    display:none;
-  }
+\
 }
 `
 
@@ -97,16 +59,11 @@ const Carousel = () => {
         
         className="mySwiper"
       >
-        {/* <SwiperSlide> <img src={img1} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img2} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img3} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img4} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img5} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img6} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img7} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img8} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img9} alt="The Weirdos" /> </SwiperSlide>
-        <SwiperSlide> <img src={img10} alt="The Weirdos" /> </SwiperSlide> */}
+        <SwiperSlide> <img src={img1} alt="The Weirdos" /> </SwiperSlide>
+        <SwiperSlide> <img src={img1} alt="The Weirdos" /> </SwiperSlide>
+        <SwiperSlide> <img src={img1} alt="The Weirdos" /> </SwiperSlide>
+        <SwiperSlide> <img src={img1} alt="The Weirdos" /> </SwiperSlide>
+        <SwiperSlide> <img src={img1} alt="The Weirdos" /> </SwiperSlide>
       </Swiper>
     </Container>
   )

@@ -7,21 +7,21 @@ import { UserContext } from "./UserContext";
 
 const Section = styled.section`
 width: 100vw;
-background-color: ${props => props.theme.body};
+background-color: lightgrey;
 `
 const NavBar = styled.nav`
-display:flex;
-justify-content: space-between;
+display: flex;
 align-items: center;
+justify-content: center;
 width: 85%;
 height: ${props => props.theme.navHeight};
 margin: 0 auto;
 `
 const Menu = styled.ul`
 display: flex;
-justify-content: space:between;
+justify-content: space-between;
+
 align-items: center;
-list-style: none;
 `
 
 //This is where the menu item is being styled
@@ -32,6 +32,7 @@ const MenuItem = styled.li`
 margin: 0 1rem;
 color: ${props => props.theme.text};
 cursor: pointer;
+padding: 1rem;
 
 &::after{
     content: ' ';
@@ -72,24 +73,24 @@ const Navigation = () => {
     return (
         <Section>
             <NavBar>
-                <Logo />
+                {/* <Logo /> */}
                 <Menu>
                     <Link to="/"> 
                     <MenuItem>Home</MenuItem>
                     </Link>
                     <Link to="/cafes"> 
-                    <MenuItem>Cafes</MenuItem>
+                    <MenuItem>Gallery</MenuItem>
                     </Link>
                     <Link to="/breweries"> 
-                    <MenuItem>Breweries</MenuItem>
+                    <MenuItem>Shop</MenuItem>
                     </Link>
                     <Link to="/aboutus"> 
-                    <MenuItem>About Us</MenuItem>
+                    <MenuItem>About Me</MenuItem>
                     </Link>
                 </Menu>
 
-                <Menu>
-                {/* {username && (
+                {/* <Menu>
+                {username && (
                     <>
                         <a onClick={logout}> 
                         <MenuItem>Logout</MenuItem>
@@ -105,9 +106,9 @@ const Navigation = () => {
                         <MenuItem>Register</MenuItem>
                         </Link>
                     </>
-                )} */}
+                )}
                     
-                </Menu>
+                </Menu> */}
 
             </NavBar>
         </Section>
