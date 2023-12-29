@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 import '@fontsource/cedarville-cursive';
 import '@fontsource-variable/montserrat';
 import '@fontsource-variable/caveat'
+import '@fontsource/ibm-plex-mono';
+
 
 const GlobalStyles = createGlobalStyle`
 
@@ -11,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    font-family: 'Montserrat Variable', sans-serif;
+    font-family: 'IBM Plex Mono', sans-serif;
     overflow-x: hidden;
 }
 

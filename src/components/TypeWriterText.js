@@ -9,11 +9,11 @@ import Button from './Button'
 //span: changes the case and font for everything
 //.text-1 : changes color for <span class= "text-1">
 const Title = styled.h2`
-font-family: 'Caveat Variable', sans-serif;
 font-size: ${props => props.theme.fontxxxl};
 text-transform: capitalize;
 text-self: center;
-padding-bottom: 1rem;
+padding: 2rem;
+
 span{
   font-family: 'Caveat Variable', sans-serif;
   color: black;
@@ -36,10 +36,10 @@ padding-bottom: 2rem;
 
 //ButtonContainer
 //Not sure why but width changes nothing
-const ButtonContainer = styled.div`
-width: 80%;
-align-self: flex-start;
-`
+// const ButtonContainer = styled.div`
+// width: 80%;
+// align-self: flex-start;
+// `
 
 //1138
 const TypeWriterText = () => {
