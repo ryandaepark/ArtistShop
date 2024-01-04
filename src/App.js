@@ -15,14 +15,14 @@ import Footer from './components/Footer';
 
 //START OF PERSONAL PROJECT
 //For Cafe Blog
-import Cafes from './pages/Cafes';
-import Breweries from './pages/Breweries';
+import Gallery from './pages/Gallery';
 import AboutUs from './pages/AboutUs';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { UserContextProvider } from './components/UserContext';
 import CreatePost from './pages/CreatePost';
 import PostPage from './pages/PostPage';
+import Shop from './pages/Shop';
 
 //Remove showcase
 function App() {
@@ -34,8 +34,8 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path= "/cafes" element={<Cafes />} />
-          <Route path= "/breweries" element={<Breweries />} />
+          <Route path= "/gallery" element={<Gallery />} />
+          <Route path= "/shop" element={<Shop />} />
           <Route path="/aboutus" element={<AboutUs />} />
           {/* <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} /> */}

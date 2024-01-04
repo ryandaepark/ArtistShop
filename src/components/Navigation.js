@@ -78,10 +78,10 @@ const Navigation = () => {
                     <Link to="/"> 
                     <MenuItem>Home</MenuItem>
                     </Link>
-                    <Link to="/cafes"> 
+                    <Link to="/gallery"> 
                     <MenuItem>Gallery</MenuItem>
                     </Link>
-                    <Link to="/breweries"> 
+                    <Link to="/shop"> 
                     <MenuItem>Shop</MenuItem>
                     </Link>
                     <Link to="/aboutus"> 

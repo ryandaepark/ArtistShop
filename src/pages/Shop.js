@@ -23,7 +23,7 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-const Breweries = () => {
+const Shop = () => {
   // const [posts, setPosts] = useState([]);
   
   // useEffect(() => {
@@ -38,7 +38,7 @@ const Breweries = () => {
 
   return (
     <Section>
-      <Title> All Posts </Title>
+      <Title> Shop </Title>
       <Link class = "flex justify-center" to = "create"> Create new post </Link>
       {/* <div class="grid grid-cols-3 gap-3">
         {posts.length > 0 && breweries.map(brewery =>(
@@ -49,4 +49,4 @@ const Breweries = () => {
   )
 }
 
-export default Breweries
+export default Shop

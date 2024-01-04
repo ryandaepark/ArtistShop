@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { React, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Post from '../components/Post'
+import Artworks from '../components/Artworks'
 
 //Section
 //First block
@@ -23,7 +24,7 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-const Cafes = () => {
+const Gallery = () => {
   // const [posts, setPosts] = useState([]);
 
   // useEffect(() => {
@@ -39,14 +40,14 @@ const Cafes = () => {
   return (
     <Section>
       <Title> All Posts </Title>
-      <Link class = "flex justify-center" to = "create"> Create new post </Link>
-      {/* <div class="grid grid-cols-3 gap-3">
-        {posts.length > 0 && cafes.map(cafe =>(
-          <Post {...cafe} />
+  
+      <div class="grid grid-cols-3 gap-3">
+        {Artworks.length > 0 && Artworks.map(art =>(
+          <Post {...art} />
         ))}
-      </div> */}
+      </div>
     </Section>
   )
 }
 
-export default Cafes
+export default Gallery

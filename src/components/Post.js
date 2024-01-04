@@ -6,10 +6,12 @@ import { Link } from 'react-router-dom';
 //Item
 const Item = styled.div`
 padding: .1rem auto;
-margin: 3rem 1rem;
-display: flex;
-align-items: center;
+margin: 1rem;
+
+display: flex;      
+flex-direction: column;  
 justify-content: center;
+align-items: center;     
 
 border: 2px solid;
 border-radius: 40px;
@@ -22,10 +24,12 @@ margin: 2rem 1rem;
 padding: 1rem;
 min-height: 150px;
 cursor: pointer;
+background-color: red;
 
 img{
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit:cover;
   transition: all 0.3s ease;
 }
 `
@@ -36,7 +40,6 @@ font-size: ${props => props.theme.fontlg};
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 1rem;
 `
 
 //Position
@@ -51,32 +54,26 @@ font-weight: 400;
 
 //InfoContainer
 const InfoContainer = styled.div`
-width: 50%;
-height: 100%;
-padding-right: 1rem;
+padding: 1rem ;
+margin-bottom: 2rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+background-color: green;
 `
 
-const Star = styled.div`
-width: 12%;
-`
-
-export default function Post({_id, type, title, summary, cover, rating, content, createdAt, author}) {
+export default function Post({_id, title, summary, img, author}) {
     return(
         <Item>
             <ImageContainer>
-            <Link to={`/post/${_id}`}>
-                <img class="rounded-lg" src={'http://localhost:4000/' + cover} />
-            </Link>
+            {/* <Link to={`/post/${_id}`}> */}
+            <img class="rounded-lg" src={img} />
+            {/* </Link> */}
             </ImageContainer>
             <InfoContainer>
-                <Name> {title} : {5} <Star> <img src={star}/> </Star> </Name>
-                <Position>{author.username}</Position>
-                <Position><time> {formatISO9075(new Date(createdAt))} </time></Position>
-                <Position>{summary}</Position>
+                <Name> {"Ryan"} </Name>
+                <Position>{"ainsd spk fwef wefowk efw weof wefojowjoef woejf"}</Position>
             </InfoContainer>
         </Item>
     );
