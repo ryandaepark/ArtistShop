@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import Post from '../components/Post'
 
 //Section
-//First block
+//min-height : This is calculating spacing per window size before scroll
 const Section = styled.section`
-min-height: 100vh;
-width:100vw;
-position: relative;
+width: 75%;
+margin-top: 2rem;
 `
 
 //Title

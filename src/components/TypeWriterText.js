@@ -46,7 +46,7 @@ const TypeWriterText = () => {
   return (
     <>
       <Title>
-      Elijah LastName
+      Elijah Griffin
       {/* <Typewriter
         options={{
           autoStart: true,

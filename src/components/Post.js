@@ -68,7 +68,7 @@ export default function Post({_id, title, summary, img, author}) {
         <Item>
             <ImageContainer>
             {/* <Link to={`/post/${_id}`}> */}
-            <img class="rounded-lg" src={img} />
+            <img src={img} />
             {/* </Link> */}
             </ImageContainer>
             <InfoContainer>

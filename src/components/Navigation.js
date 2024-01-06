@@ -1,27 +1,36 @@
 import styled from "styled-components";
-import Logo from "./Logo";
 import Button from "./Button";
 import { React, useContext, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { UserContext } from "./UserContext";
+import solarLogo from "../RyanAssets/solarlogo.png";
 
 const Section = styled.section`
-width: 100vw;
-background-color: lightgrey;
+width: 20vw;
+margin-top: 2rem;
 `
+
 const NavBar = styled.nav`
-display: flex;
+display: flex-column;
 align-items: center;
 justify-content: center;
 width: 85%;
-height: ${props => props.theme.navHeight};
 margin: 0 auto;
-`
-const Menu = styled.ul`
-display: flex;
-justify-content: space-between;
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding-bottom: 7rem;
+}
+`
+
+const Menu = styled.ul`
+display: flex-column;
 align-items: center;
+justify-content: center;
+text-align: center;
 `
 
 //This is where the menu item is being styled
@@ -33,6 +42,8 @@ margin: 0 1rem;
 color: ${props => props.theme.text};
 cursor: pointer;
 padding: 1rem;
+width: 50%;
+margin: auto;
 
 &::after{
     content: ' ';
@@ -48,32 +59,10 @@ padding: 1rem;
 `
 
 const Navigation = () => {
-    // const {setUserInfo, userInfo} = useContext(UserContext)
-    
-    // useEffect(() => {
-    //     fetch('http://localhost:4000/profile', {
-    //         credentials: 'include',
-    //     }).then(response => {
-    //         response.json().then(userInfo => {
-    //             setUserInfo(userInfo);
-    //         });
-    //     });
-    // }, []);
-
-    // function logout() {
-    //     fetch('http://localhost:4000/logout', {
-    //         credentials: 'include',
-    //         method: 'POST',
-    //     });
-    //     setUserInfo(null);
-    // }
-
-    // const username = userInfo?.username;
-
     return (
         <Section>
             <NavBar>
-                {/* <Logo /> */}
+                <img src={solarLogo}/>
                 <Menu>
                     <Link to="/"> 
                     <MenuItem>Home</MenuItem>
@@ -88,28 +77,6 @@ const Navigation = () => {
                     <MenuItem>About Me</MenuItem>
                     </Link>
                 </Menu>
-
-                {/* <Menu>
-                {username && (
-                    <>
-                        <a onClick={logout}> 
-                        <MenuItem>Logout</MenuItem>
-                        </a>
-                    </>
-                )}
-                {!username && (
-                    <>
-                        <Link to="/login"> 
-                        <MenuItem>Login</MenuItem>
-                        </Link>
-                        <Link to="/register"> 
-                        <MenuItem>Register</MenuItem>
-                        </Link>
-                    </>
-                )}
-                    
-                </Menu> */}
-
             </NavBar>
         </Section>
     )

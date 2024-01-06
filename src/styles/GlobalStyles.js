@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    font-family: 'IBM Plex Mono', sans-serif;
+    font-family:  sans-serif;
     overflow-x: hidden;
 }
 

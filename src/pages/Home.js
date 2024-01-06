@@ -9,10 +9,8 @@ import Carousel from '../components/Carousel'
 //Section
 //min-height : This is calculating spacing per window size before scroll
 const Section = styled.section`
-min-height: ${props => `calc(100vh - ${props.theme.navHeight})`};
-width: 100vw;
-background-image: linear-gradient(144deg, yellow, green);
-
+width: 75%;
+margin-top: 2rem;
 `
 
 //Container
@@ -26,7 +24,6 @@ background-image: linear-gradient(144deg, yellow, green);
 //align-items: center: makes it centered vertically
 const Container = styled.div`
 min-height: 80vh;
-
 display: flex-column;
 justify-content: center;
 align-items: center;
@@ -35,8 +32,6 @@ margin: auto;
 width: 50%;
 padding: 10px;
 `
-
-
 
 const Home = () => {
   return (
