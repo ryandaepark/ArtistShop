@@ -7,32 +7,27 @@ import { Link } from 'react-router-dom';
 const Item = styled.div`
 padding: .1rem auto;
 margin: 1rem;
-
-display: flex;      
-flex-direction: column;  
+width: auto;
+display: inline-block;      
 justify-content: center;
-align-items: center;     
+align-items: center;    
+cursor: pointer;
 
-border: 2px solid;
-border-radius: 40px;
+img {
+    display:block;
+    width: 100%;
+}
 `
 
 //ImageContainer
-const ImageContainer = styled.div`
-width: 55%;
-margin: 2rem 1rem;
-padding: 1rem;
-min-height: 150px;
-cursor: pointer;
-background-color: red;
+// const ImageContainer = styled.div`
+// margin: 1rem;
+// padding: 1rem;
+// cursor: pointer;
+// background-color: pink; 
 
-img{
-  width: 100%;
-  height: 400px;
-  object-fit:cover;
-  transition: all 0.3s ease;
-}
-`
+
+// `
 
 //Name
 const Name = styled.h2`
@@ -66,15 +61,13 @@ background-color: green;
 export default function Post({_id, title, summary, img, author}) {
     return(
         <Item>
-            <ImageContainer>
-            {/* <Link to={`/post/${_id}`}> */}
-            <img src={img} />
-            {/* </Link> */}
-            </ImageContainer>
-            <InfoContainer>
+            {/* <ImageContainer> */}
+                <img src={img} />
+            {/* </ImageContainer> */}
+            {/* <InfoContainer>
                 <Name> {"Ryan"} </Name>
                 <Position>{"ainsd spk fwef wefowk efw weof wefojowjoef woejf"}</Position>
-            </InfoContainer>
+            </InfoContainer> */}
         </Item>
     );
   }

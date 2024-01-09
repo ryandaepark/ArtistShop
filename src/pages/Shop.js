@@ -13,13 +13,23 @@ margin-top: 2rem;
 //Title
 //border-bottom + width : underlines the text 
 const Title = styled.h1`
-font-size: ${(props) => props.theme.fontxl};
-text-transform: capitalize;
+font-size: ${(props) => props.theme.fontxxxl};
+text-transform: uppercase;
 display: flex;
 margin: 1rem auto;
 padding: 1rem 0;
 border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
+`
+
+const SubTitle = styled.h3`
+font-size: ${props => props.theme.fontlg};
+text-transform: capitalize;
+text-align: center;
+color: grey;
+font-weight: 400;
+margin-bottom: 1rem;
+padding-bottom: 2rem;
 `
 
 const Shop = () => {
@@ -37,8 +47,8 @@ const Shop = () => {
 
   return (
     <Section>
-      <Title> Shop </Title>
-      <Link class = "flex justify-center" to = "create"> Create new post </Link>
+    <Title> Shop </Title>
+    <SubTitle> Purchase custom work done by me </SubTitle>
       {/* <div class="grid grid-cols-3 gap-3">
         {posts.length > 0 && breweries.map(brewery =>(
           <Post {...brewery} />

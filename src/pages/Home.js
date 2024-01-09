@@ -2,15 +2,13 @@ import { React } from "react";
 import styled from 'styled-components'
 import TypeWriterText from '../components/TypeWriterText'
 import Carousel from '../components/Carousel'
-// import { cubicCoordinates, stepsCoordinates } from 'easing-coordinates'
-// import { useSpring, animated, to as interpolate, createInterpolator } from '@react-spring/web'
-// import { useMemo } from "react";
+import backdrop from '../RyanAssets/backdrop.png';
 
 //Section
 //min-height : This is calculating spacing per window size before scroll
 const Section = styled.section`
 width: 75%;
-margin-top: 2rem;
+margin-top: 5%;
 `
 
 //Container
@@ -30,15 +28,19 @@ align-items: center;
 text-align: center;
 margin: auto;
 width: 50%;
-padding: 10px;
+padding-top: 16%;
+
+background-image: url(${backdrop});
+background-position: center;
 `
 
 const Home = () => {
   return (
     <Section>
       <Container>
+
         <TypeWriterText />
-        <Carousel/> 
+        {/* <Carousel/>  */}
       </Container>
     </Section>
   )

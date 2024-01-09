@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    font-family:  sans-serif;
+    font-family: ftnk;
     overflow-x: hidden;
 }
 

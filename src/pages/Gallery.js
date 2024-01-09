@@ -8,7 +8,6 @@ import Artworks from '../components/Artworks'
 const Section = styled.section`
 width: 75%;
 margin-top: 2rem;
-background-color: red;
 `
 
 //Container
@@ -21,28 +20,34 @@ background-color: red;
 //justify-content: center: makes it centered horizontally
 //align-items: center: makes it centered vertically
 const Container = styled.div`
-background-color: blue;
 min-height: 80vh;
-display: flex-column;
-justify-content: center;
-align-items: center;
-text-align: center;
+column-count: 3;
+column-gap: 15px;
 margin: auto;
-width: 90%;
 padding: 10px;
 `
 
 //Title
 //border-bottom + width : underlines the text 
-// const Title = styled.h1`
-// font-size: ${(props) => props.theme.fontxl};
-// text-transform: capitalize;
-// display: flex;
-// margin: 1rem auto;
-// padding: 1rem 0;
-// border-bottom: 2px solid ${(props) => props.theme.body};
-// width: fit-content;
-// `
+const Title = styled.h1`
+font-size: ${(props) => props.theme.fontxxxl};
+text-transform: uppercase;
+display: flex;
+margin: 1rem auto;
+padding: 1rem 0;
+border-bottom: 2px solid ${(props) => props.theme.body};
+width: fit-content;
+`
+
+const SubTitle = styled.h3`
+font-size: ${props => props.theme.fontlg};
+text-transform: capitalize;
+text-align: center;
+color: grey;
+font-weight: 400;
+margin-bottom: 1rem;
+padding-bottom: 2rem;
+`
 
 const Gallery = () => {
   // const [posts, setPosts] = useState([]);
@@ -59,11 +64,13 @@ const Gallery = () => {
 
   return (
     <Section>
-      <div class="grid grid-cols-3 gap-3">
+    <Title> Gallery </Title>
+    <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
+      <Container>
         {Artworks.length > 0 && Artworks.map(art =>(
           <Post {...art} />
         ))}
-      </div>
+      </Container>
     </Section>
   )
 }

@@ -2,21 +2,24 @@ import React from 'react'
 import styled from 'styled-components'
 //This import can be found on this site https://www.npmjs.com/package/typewriter-effect
 import Typewriter from 'typewriter-effect';
-import Button from './Button'
-
+import Button from './Button';
 //Title
 //text-transform: capilizes the first letter on every sentence
 //span: changes the case and font for everything
 //.text-1 : changes color for <span class= "text-1">
 const Title = styled.h2`
 font-size: ${props => props.theme.fontxxxl};
-text-transform: capitalize;
+color: pink;
+text-transform: uppercase;
 text-self: center;
 padding: 2rem;
 
 span{
-  font-family: 'Caveat Variable', sans-serif;
-  color: black;
+  
+  font-family: ftnk;
+  text-transform: capitalize;
+  font-size: 80%;
+  font-weight: 200;
 }
 `
 
@@ -27,11 +30,12 @@ span{
 const SubTitle = styled.h3`
 font-size: ${props => props.theme.fontlg};
 text-transform: capitalize;
-color: ${props => `rgba(${props.theme.textRgba}, 0.6)`};
+color: pink;
 font-weight: 600;
 margin-bottom: 1rem;
 text-self: center;
 padding-bottom: 2rem;
+
 `
 
 //ButtonContainer
@@ -47,22 +51,24 @@ const TypeWriterText = () => {
     <>
       <Title>
       Elijah Griffin
-      {/* <Typewriter
+      <Typewriter
         options={{
           autoStart: true,
           loop: true,
         }}
         onInit={(typewriter) => {
           typewriter
-            .typeString(`<span class="text-1">Brewery Reviews.</span>`)
+            .typeString(`<span>Graphics</span>`)
             .pauseFor(2000)
             .deleteAll()
-            .typeString(`<span class="text-2">Cafe Reviews.</span>`)
+            .typeString(`<span>Animations</span>`)
+            .pauseFor(2000)
+            .deleteAll().typeString(`<span>Self-portrait</span>`)
             .pauseFor(2000)
             .deleteAll()
             .start();
         }}
-      /> */}
+      />
     </Title> 
     <SubTitle> "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt consequatur quisquam maxime molestias dolores ipsum, exercitationem vel sint quidem aliquam modi quis impedit corporis unde inventore fugiat provident in." </SubTitle>
     {/* <ButtonContainer>
