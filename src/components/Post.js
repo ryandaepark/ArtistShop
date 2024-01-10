@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import star from '../RyanAssets/star.jpg';
-import {formatISO9075} from "date-fns";
-import { Link } from 'react-router-dom';
+import Popup from 'reactjs-popup';
+import React, { useState } from 'react';
 
 //Item
 const Item = styled.div`
@@ -35,6 +34,7 @@ font-size: ${props => props.theme.fontlg};
 display: flex;
 align-items: center;
 justify-content: center;
+padding-top: 1rem;
 `
 
 //Position
@@ -58,16 +58,39 @@ align-items: center;
 background-color: green;
 `
 
-export default function Post({_id, title, summary, img, author}) {
+const PopupContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+align-text: center;
+margin: 0 auto;
+padding: 1rem;
+background-color: white;
+border: 0.5rem outset green;
+
+img{
+height: 700px;
+}
+`
+
+
+
+export default function Post({title, img, author}) {
+    const [open, setOpen] = useState(false);
+    const closeModal = () => setOpen(false);
     return(
         <Item>
-            {/* <ImageContainer> */}
-                <img src={img} />
-            {/* </ImageContainer> */}
-            {/* <InfoContainer>
-                <Name> {"Ryan"} </Name>
-                <Position>{"ainsd spk fwef wefowk efw weof wefojowjoef woejf"}</Position>
-            </InfoContainer> */}
+            <img src={img} onClick={() => setOpen(o => !o)}/>
+            <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+                <PopupContainer>
+                    <a onClick={closeModal}>
+                        &times;
+                    </a>
+                    <img src={img} />
+                    <Name> {title} by {author} </Name>
+                </PopupContainer>
+            </Popup>
         </Item>
     );
   }
