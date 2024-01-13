@@ -11,11 +11,11 @@ import Footer from './components/Footer';
 //START OF ART PAGE
 import Gallery from './pages/Gallery';
 import AboutUs from './pages/AboutUs';
-import Login from './pages/Login';
-import Register from './pages/Register';
+// import Login from './pages/Login';
+// import Register from './pages/Register';
 import { UserContextProvider } from './components/UserContext';
-import CreatePost from './pages/CreatePost';
-import PostPage from './pages/PostPage';
+// import CreatePost from './pages/CreatePost';
+// import PostPage from './pages/PostPage';
 import Shop from './pages/Shop';
 
 const Page = styled.section`
@@ -42,9 +42,9 @@ function App() {
           <Route path="/aboutus" element={<AboutUs />} />
           {/* <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} /> */}
-          <Route path="/cafes/create" element={<CreatePost/>} />
-          <Route path="/breweries/create" element={<CreatePost/>} />
-          <Route path="/post/:id" element={<PostPage/>} />
+          {/* <Route path="/cafes/create" element={<CreatePost/>} />
+          <Route path="/breweries/create" element={<CreatePost/>} /> */}
+          {/* <Route path="/post/:id" element={<PostPage/>} /> */}
         </Routes>
       </Page>
       </ThemeProvider>

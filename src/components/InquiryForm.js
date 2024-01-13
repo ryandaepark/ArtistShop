@@ -8,7 +8,14 @@ const Title = styled.h1`
 font-size: ${(props) => props.theme.fontxl};
 text-transform: capitalize;
 display: flex;
-border-bottom: 2px solid ${(props) => props.theme.body};
+border-bottom: 2px solid #73AD21;
+`
+
+const Container = styled.div`
+width: 80%;
+margin: 0 auto;
+border-radius: 25px;
+border: 2px solid #73AD21;
 `
 
 const modules = {
@@ -29,10 +36,9 @@ const formats = [
 ];
 
 const CreatePost = () => {
-  const [title, setTitle] = useState('');
-  const [summary, setSummary] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [content, setContent] = useState('');
-  const [files, setFiles] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -43,59 +49,56 @@ const CreatePost = () => {
 
   async function createNewPost(ev) {
     const data = new FormData();
-    data.set('title', title);
-    data.set('summary', summary);
+    data.set('name', name);
+    data.set('email', email);
     data.set('content', content);
-    data.set('file', files[0]);
     data.set('type', postType);
 
-    ev.preventDefault();
-    const response = await fetch('http://localhost:4000/post', {
-      method:'POST', 
-      body: data,
-      credentials: 'include', 
-    });
+    // ev.preventDefault();
+    // const response = await fetch('http://localhost:4000/post', {
+    //   method:'POST', 
+    //   body: data,
+    //   credentials: 'include', 
+    // });
 
-    if (response.ok) {
-      navigate(-1);
-    }
+    // if (response.ok) {
+    //   navigate(-1);
+    // }
   }
 
   return (    
     <>
+      <Container>
+        <form class="h-auto flex flex-col justify-top gap-5 p-10" onSubmit={createNewPost}>
+            <Title> Inquiry Form </Title>
+            <input 
+              type="name" 
+              class="border h-8" 
+              placeholder={'Name'} 
+              value={name} 
+              onChange={ev => setName(ev.target.value)}
+            />
+            <input 
+              type="email" 
+              class="border h-8" 
+              placeholder={'Email'}
+              value={email}
+              onChange={ev => setEmail(ev.target.value)}
+            />
 
-        <form class="h-screen flex flex-col justify-top gap-5 p-10" onSubmit={createNewPost}>
-            <Title> Create new Post </Title>
-            <input 
-              type="title" 
-              class="border h-8" 
-              placeholder={'Title'} 
-              value={title} 
-              onChange={ev => setTitle(ev.target.value)}
-            />
-            <input 
-              type="summary" 
-              class="border h-8" 
-              placeholder={'Summary'}
-              value={summary}
-              onChange={ev => setSummary(ev.target.value)}
-            />
-            <input 
-              type="file" 
-              class="border" 
-              onChange={ev => setFiles(ev.target.files)}
-            />
             <ReactQuill 
               modules={modules} 
               formats={formats} 
               value={content} 
+              placeholder={'Type your request here'} 
               onChange={newValue => setContent(newValue)}
-
             />
+                        
             <button class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded mt-10 "> 
-              Create post 
+              Send
             </button>
         </form>
+      </Container>
     </>
   )
 }
