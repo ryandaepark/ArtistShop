@@ -11,22 +11,7 @@ display: inline-block;
 justify-content: center;
 align-items: center;    
 cursor: pointer;
-
-img {
-    display:block;
-    width: 100%;
-}
 `
-
-//ImageContainer
-// const ImageContainer = styled.div`
-// margin: 1rem;
-// padding: 1rem;
-// cursor: pointer;
-// background-color: pink; 
-
-
-// `
 
 //Name
 const Name = styled.h2`
@@ -35,27 +20,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 padding-top: 1rem;
-`
-
-//Position
-const Position = styled.h2`
-font-size: ${props => props.theme.fontmd};
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: 1rem;
-font-weight: 400;
-`
-
-//InfoContainer
-const InfoContainer = styled.div`
-padding: 1rem ;
-margin-bottom: 2rem;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: green;
 `
 
 const PopupContainer = styled.div`
@@ -74,21 +38,52 @@ height: 700px;
 }
 `
 
+const ImgWrap = styled.div`
+position: relative;
 
+img{
+width: 100%;
+}
 
-export default function Post({title, img, author}) {
+p{
+width: 100%;
+height: 100%;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center; 
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: ${props => props.theme.fontxl};
+color: white;
+background: rgba(115, 173, 33, 0.3);
+opacity: 0;
+}
+
+p:hover{
+opacity: 1;
+}
+`
+
+export default function Post({title, img}) {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
+    
     return(
         <Item>
-            <img src={img} onClick={() => setOpen(o => !o)}/>
+            <ImgWrap>
+                <p class="description"> {title} </p>
+                <img src={img} onClick={() => setOpen(o => !o)}/>
+            </ImgWrap>
             <Popup open={open} closeOnDocumentClick onClose={closeModal}>
                 <PopupContainer>
                     <a onClick={closeModal}>
                         &times;
                     </a>
                     <img src={img} />
-                    <Name> {title} by {author} </Name>
+                    <Name> {title} </Name>
                 </PopupContainer>
             </Popup>
         </Item>
