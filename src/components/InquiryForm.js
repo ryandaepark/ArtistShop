@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import ReactQuill from 'react-quill/'
+import React, { useRef, useState} from 'react'
 import 'react-quill/dist/quill.snow.css'
-import { useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import emailjs from '@emailjs/browser';
 
 const Title = styled.h1`
 font-size: ${(props) => props.theme.fontxl};
@@ -12,92 +11,87 @@ border-bottom: 2px solid #73AD21;
 `
 
 const Container = styled.div`
-width: 80%;
+width: 70%;
 margin: 0 auto;
-border-radius: 25px;
+border-radius: 10px;
 border: 2px solid #73AD21;
+display: flex-column;
+align-items: center;
+justify-content: center;
+text-align: center;
 `
 
-const modules = {
-  toolbar: [
-    [{ 'header': [1, 2, false] }],
-    ['bold', 'italic', 'underline','strike', 'blockquote'],
-    [{'list': 'ordered'}, {'list': 'bullet'}, {'indent': '-1'}, {'indent': '+1'}],
-    ['link', 'image'],
-    ['clean']
-  ]
-};
-
-const formats = [
-'header',
-'bold', 'italic', 'underline', 'strike', 'blockquote',
-'list', 'bullet', 'indent',
-'link', 'image'
-];
+const ConfirmationPost = styled.div`
+text-align: center;
+font-size: ${(props) => props.theme.fontxl};
+width: 60%;
+margin: 0 auto;
+padding-top: 1rem;
+`
 
 const CreatePost = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [content, setContent] = useState('');
-  const navigate = useNavigate();
-  const location = useLocation();
+  const form = useRef();
+  const [emailed, setEmailed] = useState(false);
 
-  //String manipulation to get parent page name
-  const url = location.pathname;
-  const urlParts = url.split('/');
-  const postType = urlParts[urlParts.length - 2];
 
-  async function createNewPost(ev) {
-    const data = new FormData();
-    data.set('name', name);
-    data.set('email', email);
-    data.set('content', content);
-    data.set('type', postType);
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    // ev.preventDefault();
-    // const response = await fetch('http://localhost:4000/post', {
-    //   method:'POST', 
-    //   body: data,
-    //   credentials: 'include', 
-    // });
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    .then((result) => {
+      console.log(result.text);
+      setEmailed(!emailed);
+    }, (error) => {
+      console.log(error.text);
+    });
+  };
 
-    // if (response.ok) {
-    //   navigate(-1);
-    // }
-  }
 
   return (    
     <>
       <Container>
-        <form class="h-auto flex flex-col justify-top gap-5 p-10" onSubmit={createNewPost}>
+        {emailed && (
+          <>
+            <form ref={form} class="h-auto flex flex-col justify-top gap-5 p-10" onSubmit={sendEmail}>
             <Title> Inquiry Form </Title>
             <input 
-              type="name" 
-              class="border h-8" 
+              type="text" 
+              name="user_name" 
               placeholder={'Name'} 
-              value={name} 
-              onChange={ev => setName(ev.target.value)}
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
             />
             <input 
               type="email" 
-              class="border h-8" 
+              name="user_email" 
               placeholder={'Email'}
-              value={email}
-              onChange={ev => setEmail(ev.target.value)}
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
             />
+            <textarea 
+              name="message" 
+              placeholder={'Type what type of commision work you would like and a description of the character you would like.'} 
+              rows="8"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+            <input 
+              type="submit" 
+              value="Send" 
+              class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded mt-2"
+            />
+          </form>          
+        </>
+      )}
+      {!emailed && (
+        <>
+          <ConfirmationPost> Thank you for your request! I will get back to you as soon as possible. </ConfirmationPost>
+          <button 
+            class="m-3 p-2.5 bg-transparent hover:bg-green-700 text-green-700 font-semibold hover:text-white border rounded"
+            onClick = {() => setEmailed(!emailed)}
+          > 
+            Click here to resubmit commision request.
+          </button>
+        </>
+      )}
 
-            <ReactQuill 
-              modules={modules} 
-              formats={formats} 
-              value={content} 
-              placeholder={'Type your request here'} 
-              onChange={newValue => setContent(newValue)}
-            />
-                        
-            <button class="bg-gray-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded mt-10 "> 
-              Send
-            </button>
-        </form>
       </Container>
     </>
   )

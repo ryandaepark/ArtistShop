@@ -50,7 +50,7 @@ border-radius: 25px;
 margin: 2rem;
 
 img{
-  height: 400px;
+  width: 400px;
   padding: 2rem;
   border-radius: 10%;
 }

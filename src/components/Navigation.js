@@ -44,6 +44,7 @@ cursor: pointer;
 padding: 1rem;
 width: 50%;
 margin: auto;
+font-size: ${props => props.theme.fontlg};
 
 &::after{
     content: ' ';
