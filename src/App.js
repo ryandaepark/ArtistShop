@@ -10,12 +10,14 @@ import Footer from './components/Footer';
 
 //START OF ART PAGE
 import Gallery from './pages/Gallery';
-import AboutUs from './pages/AboutUs';
-// import Login from './pages/Login';
-// import Register from './pages/Register';
+import Animations from './pages/Gallery_Animations';
+import Graphics from './pages/Gallery_Graphics';
+import MiniMe from './pages/Gallery_MiniMe';
+
+import AboutMe from './pages/AboutMe';
+
 import { UserContextProvider } from './components/UserContext';
-// import CreatePost from './pages/CreatePost';
-// import PostPage from './pages/PostPage';
+
 import Shop from './pages/Shop';
 
 const Page = styled.section`
@@ -39,7 +41,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path= "/gallery" element={<Gallery />} />
           <Route path= "/shop" element={<Shop />} />
-          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/gallery/minime" element={<MiniMe />} />
+          <Route path="/gallery/animations" element={<Animations />} />
+          <Route path="/gallery/graphics" element={<Graphics />} />
           {/* <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} /> */}
           {/* <Route path="/cafes/create" element={<CreatePost/>} />
