@@ -52,7 +52,7 @@ padding-bottom: 2rem;
 
 const GalleryItem = styled.div`
 height: 200px;
-max-width: 70%;
+max-width: 800px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -66,6 +66,12 @@ color: white;
 background-image: url(${testImage});
 background-size: cover;
 background-position: center;
+transition: border 0.3s, padding 0.3s;
+
+:hover{
+  border: 5px solid rgba(115, 173, 33, 0.8);
+  padding-bottom: 1rem;
+}
 `
 
 const Gallery = () => {
