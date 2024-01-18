@@ -51,11 +51,39 @@ font-size: ${props => props.theme.fontlg};
     display: block;
     width: 0%;
     height: 2px;
-    background: ${props => props.theme.text};
+    background: rgba(115, 173, 33, 0.8);
     transition: width 0.3s ease;
 }
 &:hover::after{
     width: 100%;
+}
+`
+const DropDown = styled.li`
+
+a{
+    display: block;
+    color: black;
+    padding: 10px 15px;
+}
+
+.content{
+    overflow: hidden;  
+    height: 0;  
+    opacity: 0;
+    width: 10rem;
+    margin: 0 auto;
+    transition: height 0ms 400ms, opacity 0.5s linear;
+}
+
+:hover .content{
+    height: 100%;
+    display: block;
+    opacity: 1;
+}
+
+a:hover .subitem{
+    background-color: rgba(115, 173, 33, 0.6); 
+    border-radius: 25px;
 }
 `
 
@@ -68,13 +96,33 @@ const Navigation = () => {
                     <Link to="/"> 
                     <MenuItem>Home</MenuItem>
                     </Link>
-                    <Link to="/gallery"> 
-                    <MenuItem>Gallery</MenuItem>
-                    </Link>
+
+                    <DropDown>
+                        <Link to="/gallery"> 
+                        <MenuItem>Gallery</MenuItem>
+                        </Link>
+                        <div class="content">
+                            <Link to="/gallery/minime"> 
+                            <a class="subitem"> MiniMe </a>
+                            </Link>
+
+                            <Link to="/gallery/graphics"> 
+                            <a class="subitem"> Graphics </a>
+                            </Link>
+
+                            <Link to="/gallery/animations"> 
+                            <a class="subitem"> Animations </a>
+                            </Link>
+
+                        </div>
+                    </DropDown>
+                    
+
+
                     <Link to="/shop"> 
                     <MenuItem>Shop</MenuItem>
                     </Link>
-                    <Link to="/aboutus"> 
+                    <Link to="/aboutme"> 
                     <MenuItem>About Me</MenuItem>
                     </Link>
                 </Menu>

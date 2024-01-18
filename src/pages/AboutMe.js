@@ -46,7 +46,7 @@ margin-bottom: 1rem;
 padding-bottom: 2rem;
 `
 
-const AboutUs = () => {
+const AboutMe = () => {
   return (
     <Section>
     <Container>
@@ -66,4 +66,4 @@ const AboutUs = () => {
   )
 } 
 
-export default AboutUs
+export default AboutMe

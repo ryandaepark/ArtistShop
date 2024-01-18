@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { React, useEffect, useState } from "react";
 import Post from '../components/Post'
 import Artworks from '../components/Artworks'
-import testImage from '../RyanAssets/girl.jpg'
-import { Link } from 'react-router-dom';
+
 //Section
 //First block
 const Section = styled.section`
@@ -21,11 +20,11 @@ margin-top: 2rem;
 //justify-content: center: makes it centered horizontally
 //align-items: center: makes it centered vertically
 const Container = styled.div`
-display: flex-column;
-justify-content: center;
-align-items: center;
-text-align: center;
+min-height: 80vh;
+column-count: 3;
+column-gap: 15px;
 margin: auto;
+padding: 10px;
 `
 
 //Title
@@ -50,25 +49,7 @@ margin-bottom: 1rem;
 padding-bottom: 2rem;
 `
 
-const GalleryItem = styled.div`
-height: 200px;
-max-width: 70%;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 2rem auto;
-
-text-align: center;
-font-size: ${(props) => props.theme.fontxxl};
-
-background-color: pink;
-color: white;
-background-image: url(${testImage});
-background-size: cover;
-background-position: center;
-`
-
-const Gallery = () => {
+const Gallery_Graphics = () => {
   // const [posts, setPosts] = useState([]);
 
   // useEffect(() => {
@@ -83,23 +64,15 @@ const Gallery = () => {
 
   return (
     <Section>
-    <Title> Gallery </Title>
+    <Title> Graphics </Title>
     <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
       <Container>
-        <Link to="/gallery/minime"> 
-          <GalleryItem>Mini Me</GalleryItem>
-        </Link>
-
-        <Link to="/gallery/graphics">
-        <GalleryItem>Graphics</GalleryItem>
-        </Link>
-
-        <Link to="/gallery/animations">
-        <GalleryItem>Animations</GalleryItem>
-        </Link>
+        {Artworks.length > 0 && Artworks.map(art =>(
+          <Post {...art} />
+        ))}
       </Container>
     </Section>
   )
 }
 
-export default Gallery
+export default Gallery_Graphics

@@ -58,7 +58,8 @@ left: 50%;
 transform: translate(-50%, -50%);
 font-size: ${props => props.theme.fontxl};
 color: white;
-background: rgba(115, 173, 33, 0.3);
+background: rgba(0, 0, 0, 0.45);
+transition: .5s ease;
 opacity: 0;
 }
 

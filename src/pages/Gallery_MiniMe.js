@@ -49,7 +49,7 @@ margin-bottom: 1rem;
 padding-bottom: 2rem;
 `
 
-const Gallery = () => {
+const Gallery_MiniMe = () => {
   // const [posts, setPosts] = useState([]);
 
   // useEffect(() => {
@@ -64,7 +64,7 @@ const Gallery = () => {
 
   return (
     <Section>
-    <Title> Gallery </Title>
+    <Title> MiniMe </Title>
     <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
       <Container>
         {Artworks.length > 0 && Artworks.map(art =>(
@@ -75,4 +75,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery
+export default Gallery_MiniMe
