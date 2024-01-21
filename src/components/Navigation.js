@@ -24,7 +24,7 @@ margin: 0 auto;
     margin-left: auto;
     margin-right: auto;
     width: 75%;
-    padding-bottom: 7rem;
+    padding-bottom: 4rem;
 }
 
 .sub {
