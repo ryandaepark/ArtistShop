@@ -50,7 +50,7 @@ const TypeWriterText = () => {
   return (
     <>
       <Title>
-      Elijah Griffin
+      Solar Broccoli
       <Typewriter
         options={{
           autoStart: true,

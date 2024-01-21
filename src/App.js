@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 //START OF ART PAGE
 import Gallery from './pages/Gallery';
 import Animations from './pages/Gallery_Animations';
-import Graphics from './pages/Gallery_Graphics';
+import Illustrations from './pages/Gallery_Illustrations';
 import MiniMe from './pages/Gallery_MiniMe';
 
 import AboutMe from './pages/AboutMe';
@@ -44,7 +44,7 @@ function App() {
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/gallery/minime" element={<MiniMe />} />
           <Route path="/gallery/animations" element={<Animations />} />
-          <Route path="/gallery/graphics" element={<Graphics />} />
+          <Route path="/gallery/illustrations" element={<Illustrations />} />
           {/* <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} /> */}
           {/* <Route path="/cafes/create" element={<CreatePost/>} />

@@ -20,11 +20,10 @@ margin-top: 2rem;
 //justify-content: center: makes it centered horizontally
 //align-items: center: makes it centered vertically
 const Container = styled.div`
-min-height: 80vh;
-column-count: 3;
-column-gap: 15px;
-margin: auto;
-padding: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
 `
 
 //Title
@@ -39,33 +38,12 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-const SubTitle = styled.h3`
-font-size: ${props => props.theme.fontlg};
-text-transform: capitalize;
-text-align: center;
-color: grey;
-font-weight: 400;
-margin-bottom: 1rem;
-padding-bottom: 2rem;
-`
+
 
 const Gallery_MiniMe = () => {
-  // const [posts, setPosts] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:4000/post').then(response => {
-  //     response.json().then(posts => {
-  //       setPosts(posts);
-  //     });
-  //   });
-  // }, []);
-
-  // const cafes = posts.filter((post) => post.type === "cafes")
-
   return (
     <Section>
-    <Title> MiniMe </Title>
-    <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
+    <Title> Mini Me </Title>
       <Container>
         {Artworks.length > 0 && Artworks.map(art =>(
           <Post {...art} />

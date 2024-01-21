@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 
 //Item
 const Item = styled.div`
+flex-basis: 350px; 
+
 padding: .1rem auto;
 margin: 1rem;
 width: auto;
@@ -75,8 +77,8 @@ export default function Post({title, img}) {
     return(
         <Item>
             <ImgWrap>
-                <p class="description"> {title} </p>
-                <img src={img} onClick={() => setOpen(o => !o)}/>
+                <p class="description" onClick={() => setOpen(o => !o)}> {title} </p>
+                <img src={img}/>
             </ImgWrap>
             <Popup open={open} closeOnDocumentClick onClose={closeModal}>
                 <PopupContainer>

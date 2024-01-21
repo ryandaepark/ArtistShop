@@ -4,6 +4,8 @@ import { React, useContext, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { UserContext } from "./UserContext";
 import solarLogo from "../RyanAssets/solarlogo.png";
+import x from "../RyanAssets/x_logo.png";
+import instagram from "../RyanAssets/insta_logo.png";
 
 const Section = styled.section`
 width: 20vw;
@@ -17,12 +19,18 @@ justify-content: center;
 width: 85%;
 margin: 0 auto;
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  padding-bottom: 7rem;
+.main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding-bottom: 7rem;
+}
+
+.sub {
+    height: 4rem;
+    margin: .5rem auto;
+    padding: 1rem;
 }
 `
 
@@ -54,16 +62,18 @@ font-size: ${props => props.theme.fontlg};
     background: rgba(115, 173, 33, 0.8);
     transition: width 0.3s ease;
 }
+
 &:hover::after{
     width: 100%;
 }
 `
 const DropDown = styled.li`
 
-a{
+.subitem{
     display: block;
     color: black;
     padding: 10px 15px;
+    margin: 1rem;
 }
 
 .content{
@@ -87,11 +97,13 @@ a:hover .subitem{
 }
 `
 
+
+
 const Navigation = () => {
     return (
         <Section>
             <NavBar>
-                <img src={solarLogo}/>
+                <img class="main" src={solarLogo}/>
                 <Menu>
                     <Link to="/"> 
                     <MenuItem>Home</MenuItem>
@@ -103,21 +115,18 @@ const Navigation = () => {
                         </Link>
                         <div class="content">
                             <Link to="/gallery/minime"> 
-                            <a class="subitem"> MiniMe </a>
+                            <a class="subitem"> Mini Me </a>
                             </Link>
 
-                            <Link to="/gallery/graphics"> 
-                            <a class="subitem"> Graphics </a>
+                            <Link to="/gallery/illustrations"> 
+                            <a class="subitem"> Illustrations </a>
                             </Link>
 
                             <Link to="/gallery/animations"> 
                             <a class="subitem"> Animations </a>
                             </Link>
-
                         </div>
                     </DropDown>
-                    
-
 
                     <Link to="/shop"> 
                     <MenuItem>Shop</MenuItem>
@@ -125,6 +134,8 @@ const Navigation = () => {
                     <Link to="/aboutme"> 
                     <MenuItem>About Me</MenuItem>
                     </Link>
+                    <a href="https://twitter.com/solarbroccoli"> <img class="sub" src={x}/> </a>
+                    <a href="https://www.instagram.com/solarbroccoli/"> <img class="sub" src={instagram}/> </a>
                 </Menu>
             </NavBar>
         </Section>

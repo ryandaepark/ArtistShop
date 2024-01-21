@@ -66,7 +66,7 @@ font-size: ${props => props.theme.fontxl};
 const Shop = () => {
   return (
     <Section>
-    <Title> Commisions </Title>
+    <Title> Commissions </Title>
     <SubTitle> Purchase custom work done by me </SubTitle>
     <ExamplesBlock>
       <Example> 

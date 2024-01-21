@@ -9,7 +9,7 @@ export default [
     {
     img: img1, 
     title:"Artist", 
-    type: "",
+    type: "MiniMe",
     }, 
     {
     img: img2, 

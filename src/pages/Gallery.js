@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 import { React, useEffect, useState } from "react";
-import Post from '../components/Post'
-import Artworks from '../components/Artworks'
 import testImage from '../RyanAssets/girl.jpg'
 import { Link } from 'react-router-dom';
 //Section
@@ -75,17 +73,6 @@ transition: border 0.3s, padding 0.3s;
 `
 
 const Gallery = () => {
-  // const [posts, setPosts] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:4000/post').then(response => {
-  //     response.json().then(posts => {
-  //       setPosts(posts);
-  //     });
-  //   });
-  // }, []);
-
-  // const cafes = posts.filter((post) => post.type === "cafes")
 
   return (
     <Section>
@@ -96,8 +83,8 @@ const Gallery = () => {
           <GalleryItem>Mini Me</GalleryItem>
         </Link>
 
-        <Link to="/gallery/graphics">
-        <GalleryItem>Graphics</GalleryItem>
+        <Link to="/gallery/illustrations">
+        <GalleryItem>Illustrations</GalleryItem>
         </Link>
 
         <Link to="/gallery/animations">

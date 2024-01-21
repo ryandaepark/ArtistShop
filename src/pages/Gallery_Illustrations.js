@@ -39,33 +39,10 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-const SubTitle = styled.h3`
-font-size: ${props => props.theme.fontlg};
-text-transform: capitalize;
-text-align: center;
-color: grey;
-font-weight: 400;
-margin-bottom: 1rem;
-padding-bottom: 2rem;
-`
-
-const Gallery_Graphics = () => {
-  // const [posts, setPosts] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:4000/post').then(response => {
-  //     response.json().then(posts => {
-  //       setPosts(posts);
-  //     });
-  //   });
-  // }, []);
-
-  // const cafes = posts.filter((post) => post.type === "cafes")
-
-  return (
+const Gallery_Illustrations = () => {
+return (
     <Section>
-    <Title> Graphics </Title>
-    <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
+    <Title> Illustrations </Title>
       <Container>
         {Artworks.length > 0 && Artworks.map(art =>(
           <Post {...art} />
@@ -75,4 +52,4 @@ const Gallery_Graphics = () => {
   )
 }
 
-export default Gallery_Graphics
+export default Gallery_Illustrations

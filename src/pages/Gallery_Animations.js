@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 import Post from '../components/Post'
 import Artworks from '../components/Artworks'
 
@@ -39,33 +39,10 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-const SubTitle = styled.h3`
-font-size: ${props => props.theme.fontlg};
-text-transform: capitalize;
-text-align: center;
-color: grey;
-font-weight: 400;
-margin-bottom: 1rem;
-padding-bottom: 2rem;
-`
-
 const Gallery_Animations = () => {
-  // const [posts, setPosts] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('http://localhost:4000/post').then(response => {
-  //     response.json().then(posts => {
-  //       setPosts(posts);
-  //     });
-  //   });
-  // }, []);
-
-  // const cafes = posts.filter((post) => post.type === "cafes")
-
   return (
     <Section>
     <Title> Animations </Title>
-    <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
       <Container>
         {Artworks.length > 0 && Artworks.map(art =>(
           <Post {...art} />
