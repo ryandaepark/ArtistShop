@@ -13,12 +13,12 @@ import Gallery from './pages/Gallery';
 import Animations from './pages/Gallery_Animations';
 import Illustrations from './pages/Gallery_Illustrations';
 import MiniMe from './pages/Gallery_MiniMe';
-
 import AboutMe from './pages/AboutMe';
+import Commissions from './pages/Commissions';
+import Shop from './pages/Shop';
 
 import { UserContextProvider } from './components/UserContext';
 
-import Shop from './pages/Shop';
 
 const Page = styled.section`
 display: flex;
@@ -40,6 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path= "/gallery" element={<Gallery />} />
+          <Route path= "/commissions" element={<Commissions />} />
           <Route path= "/shop" element={<Shop />} />
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/gallery/minime" element={<MiniMe />} />

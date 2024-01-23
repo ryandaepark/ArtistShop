@@ -128,9 +128,14 @@ const Navigation = () => {
                         </div>
                     </DropDown>
 
+                    <Link to="/commissions"> 
+                    <MenuItem>Commissions</MenuItem>
+                    </Link>
+
                     <Link to="/shop"> 
                     <MenuItem>Shop</MenuItem>
                     </Link>
+
                     <Link to="/aboutme"> 
                     <MenuItem>About Me</MenuItem>
                     </Link>

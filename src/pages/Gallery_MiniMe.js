@@ -38,14 +38,14 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-
+const minimes = Artworks.filter((post) => post.type === "MiniMe")
 
 const Gallery_MiniMe = () => {
   return (
     <Section>
     <Title> Mini Me </Title>
       <Container>
-        {Artworks.length > 0 && Artworks.map(art =>(
+        {Artworks.length > 0 && minimes.map(art =>(
           <Post {...art} />
         ))}
       </Container>

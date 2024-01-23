@@ -39,12 +39,14 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
+const illustrations = Artworks.filter((post) => post.type === "Illustrations")
+
 const Gallery_Illustrations = () => {
 return (
     <Section>
     <Title> Illustrations </Title>
       <Container>
-        {Artworks.length > 0 && Artworks.map(art =>(
+        {Artworks.length > 0 && illustrations.map(art =>(
           <Post {...art} />
         ))}
       </Container>

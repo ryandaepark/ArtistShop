@@ -45,6 +45,7 @@ position: relative;
 
 img{
 width: 100%;
+
 }
 
 p{
@@ -70,14 +71,15 @@ opacity: 1;
 }
 `
 
-export default function Post({title, img}) {
+export default function Post({title, img, type}) {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
-    
+
     return(
         <Item>
             <ImgWrap>
                 <p class="description" onClick={() => setOpen(o => !o)}> {title} </p>
+                
                 <img src={img}/>
             </ImgWrap>
             <Popup open={open} closeOnDocumentClick onClose={closeModal}>
