@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { React } from "react";
 import Post from '../components/Post'
-import Artworks from '../components/Artworks'
+import Animations from '../components/Animations'
 
 //Section
 //First block
@@ -39,14 +39,12 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-const animations = Artworks.filter((post) => post.type === "Animations")
-
 const Gallery_Animations = () => {
   return (
     <Section>
     <Title> Animations </Title>
       <Container>
-        {Artworks.length > 0 && animations.map(art =>(
+        {Animations.length > 0 && Animations.map(art =>(
           <Post {...art} />
         ))}
       </Container>

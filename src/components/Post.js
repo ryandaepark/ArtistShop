@@ -71,15 +71,22 @@ opacity: 1;
 }
 `
 
-export default function Post({title, img, type}) {
+export default function Post({title, img, type, gif}) {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
+    
+    let clicked_img;
+
+    if (type == "Animations") {
+        clicked_img = <img src={gif}/>
+    } else {
+        clicked_img = <img src={img}/>
+    }
 
     return(
         <Item>
             <ImgWrap>
                 <p class="description" onClick={() => setOpen(o => !o)}> {title} </p>
-                
                 <img src={img}/>
             </ImgWrap>
             <Popup open={open} closeOnDocumentClick onClose={closeModal}>
@@ -87,7 +94,7 @@ export default function Post({title, img, type}) {
                     <a onClick={closeModal}>
                         &times;
                     </a>
-                    <img src={img} />
+                    {clicked_img}
                     <Name> {title} </Name>
                 </PopupContainer>
             </Popup>
