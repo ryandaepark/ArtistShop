@@ -33,7 +33,7 @@ align-text: center;
 margin: 0 auto;
 padding: 1rem;
 background-color: white;
-border: 0.5rem outset green;
+box-shadow: 0 0 50px 15px #73ad21;
 
 img{
 height: 700px;
