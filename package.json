@@ -21,6 +21,7 @@
     "date-fns": "^2.30.0",
     "easing-coordinates": "^2.0.2",
     "express": "^4.18.2",
+    "freezeframe": "^5.0.2",
     "gsap": "^3.11.5",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.2.0",
