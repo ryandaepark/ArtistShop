@@ -1,7 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { React, useEffect, useState } from "react";
-import testImage from '../RyanAssets/girl.jpg'
+import testImage from '../RyanAssets/girl.jpg';
 import { Link } from 'react-router-dom';
+import MiniMePanel from '../RyanAssets/Panel-MiniMe.gif';
+
 //Section
 //First block
 const Section = styled.section`
@@ -55,13 +57,10 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin: 2rem auto;
-
 text-align: center;
 font-size: ${(props) => props.theme.fontxxl};
-
 background-color: pink;
 color: white;
-background-image: url(${testImage});
 background-size: cover;
 background-position: center;
 transition: border 0.3s, padding 0.3s;
@@ -72,6 +71,18 @@ transition: border 0.3s, padding 0.3s;
 }
 `
 
+const Panel1 = styled(GalleryItem)`
+background-image: url(${MiniMePanel})
+`
+
+const Panel2 = styled(GalleryItem)`
+background-image: url(${testImage})
+`
+
+const Panel3 = styled(GalleryItem)`
+background-image: url(${testImage})
+`
+
 const Gallery = () => {
 
   return (
@@ -80,15 +91,15 @@ const Gallery = () => {
     <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
       <Container>
         <Link to="/gallery/minime"> 
-          <GalleryItem>Mini Me</GalleryItem>
+          <Panel1> Mini Me </Panel1>
         </Link>
 
         <Link to="/gallery/illustrations">
-        <GalleryItem>Illustrations</GalleryItem>
+          <Panel2>Illustrations</Panel2>
         </Link>
 
         <Link to="/gallery/animations">
-        <GalleryItem>Animations</GalleryItem>
+          <Panel3>Animations</Panel3>
         </Link>
       </Container>
     </Section>

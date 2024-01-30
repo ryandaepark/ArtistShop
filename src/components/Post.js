@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 //Item
 const Item = styled.div`
 flex-basis: 350px; 
-
 padding: .1rem auto;
 margin: 1rem;
 width: auto;
@@ -45,7 +44,6 @@ position: relative;
 
 img{
 width: 100%;
-
 }
 
 p{
