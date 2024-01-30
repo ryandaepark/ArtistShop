@@ -6,7 +6,6 @@ import './index.css';
 
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
-import Footer from './components/Footer';
 
 //START OF ART PAGE
 import Gallery from './pages/Gallery';
@@ -16,9 +15,6 @@ import MiniMe from './pages/Gallery_MiniMe';
 import AboutMe from './pages/AboutMe';
 import Commissions from './pages/Commissions';
 import Shop from './pages/Shop';
-
-import { UserContextProvider } from './components/UserContext';
-
 
 const Page = styled.section`
 display: flex;
@@ -32,7 +28,6 @@ width: 90%;
 function App() {
   return (
     <>
-    <UserContextProvider>
       <GlobalStyles />
       <ThemeProvider theme={light} >
       <Page>
@@ -54,7 +49,6 @@ function App() {
         </Routes>
       </Page>
       </ThemeProvider>
-    </UserContextProvider>
     </>
   );
 }
