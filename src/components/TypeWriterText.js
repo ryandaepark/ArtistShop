@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 //This import can be found on this site https://www.npmjs.com/package/typewriter-effect
 import Typewriter from 'typewriter-effect';
-import Button from './Button';
+
 //Title
 //text-transform: capilizes the first letter on every sentence
 //span: changes the case and font for everything

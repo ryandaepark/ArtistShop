@@ -1,7 +1,6 @@
 import { React } from "react";
 import styled from 'styled-components'
 import TypeWriterText from '../components/TypeWriterText'
-import Carousel from '../components/Carousel'
 import backdrop from '../RyanAssets/backdrop.png';
 
 //Section
@@ -38,9 +37,7 @@ const Home = () => {
   return (
     <Section>
       <Container>
-
         <TypeWriterText />
-        {/* <Carousel/>  */}
       </Container>
     </Section>
   )

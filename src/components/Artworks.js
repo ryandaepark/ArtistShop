@@ -24,6 +24,18 @@ import img23 from '../RyanAssets/Moody.png'
 import img24 from '../RyanAssets/Microscopic.jpg'
 import img25 from '../RyanAssets/Ellipses.JPG'
 
+import ill1 from '../RyanAssets/Back2Back2020.jpg'
+import ill2 from '../RyanAssets/FLOAT2021.jpg'
+import ill3 from '../RyanAssets/Flowersstudy2021.png'
+import ill4 from '../RyanAssets/focusongrowth2022.jpg'
+import ill5 from '../RyanAssets/HEART2021.png'
+import ill6 from '../RyanAssets/inevitablepitfalls2022.jpeg'
+import ill7 from '../RyanAssets/innerworkings2020.jpg'
+import ill8 from '../RyanAssets/ItchyandScratchy2020.jpg'
+import ill9 from '../RyanAssets/miscellaneousdoodle2023.png'
+import ill10 from '../RyanAssets/Scott Pilgrim2023.png'
+import ill11 from '../RyanAssets/yzyjacketstudy2021.jpg'
+
 export default [
     {
     img: img1, 
@@ -149,5 +161,60 @@ export default [
     img: img25, 
     title:"Ellipses", 
     type: "MiniMe",
+    },
+    {
+    img: ill1, 
+    title:"Back2Back", 
+    type: "Illustrations",
+    },
+    {
+    img: ill2, 
+    title:"FLOAT", 
+    type: "Illustrations",
+    },
+    {
+    img: ill3, 
+    title:"Flowers Study", 
+    type: "Illustrations",
+    },
+    {
+    img: ill4, 
+    title:"Focus On Growth", 
+    type: "Illustrations",
+    },
+    {
+    img: ill5, 
+    title:"HEART", 
+    type: "Illustrations",
+    },
+    {
+    img: ill6, 
+    title:"Inevitable Pitfalls", 
+    type: "Illustrations",
+    },
+    {
+    img: ill7, 
+    title:"Inner Workings", 
+    type: "Illustrations",
+    },
+    {
+    img: ill8, 
+    title:"Itchy and Scratchy", 
+    type: "Illustrations",
+    },
+    {
+    img: ill9, 
+    title:"Miscellaneous Doodle", 
+    type: "Illustrations",
+    },
+    {
+    img: ill10, 
+    title:"Scott Pilgrim", 
+    type: "Illustrations",
+    },
+    {
+    img: ill11, 
+    title:"Yzy Jacket Study", 
+    type: "Illustrations",
     },
 ]

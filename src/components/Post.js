@@ -16,7 +16,8 @@ cursor: pointer;
 
 //Name
 const Name = styled.h2`
-font-size: ${props => props.theme.fontlg};
+font-size: ${props => props.theme.fontxl};
+font-weight: 500;
 display: flex;
 align-items: center;
 justify-content: center;

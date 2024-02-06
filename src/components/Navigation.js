@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import Button from "./Button";
 import { React, useContext, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import { UserContext } from "./UserContext";
 import solarLogo from "../RyanAssets/solarlogo.png";
 import x from "../RyanAssets/x_logo.png";
 import instagram from "../RyanAssets/insta_logo.png";
