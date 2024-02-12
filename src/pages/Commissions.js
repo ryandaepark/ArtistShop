@@ -3,8 +3,9 @@ import { React, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import Post from '../components/Post'
 import CommisionForm from '../components/InquiryForm'
-import ex_static from '../RyanAssets/Shop1.jpg'
-import ex_animated from '../RyanAssets/Shop2.gif'
+import ex_static from '../RyanAssets/Badtz Maru Cover.png'
+import ex_animated from '../RyanAssets/Badtz Maru 2023.gif'
+
 //Section
 //min-height : This is calculating spacing per window size before scroll
 const Section = styled.section`

@@ -76,7 +76,7 @@ export default function Post({title, img, type, gif}) {
     
     let clicked_img;
 
-    if (type == "Animations") {
+    if (type == "Gif") {
         clicked_img = <img src={gif}/>
     } else {
         clicked_img = <img src={img}/>
