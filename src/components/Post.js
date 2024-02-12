@@ -38,6 +38,10 @@ box-shadow: 0 0 50px 15px #73ad21;
 img{
 height: 700px;
 }
+
+video{
+height: 700px;
+}
 `
 
 const ImgWrap = styled.div`
@@ -78,6 +82,8 @@ export default function Post({title, img, type, gif}) {
 
     if (type == "Gif") {
         clicked_img = <img src={gif}/>
+    } else if (type == "Mp4") {
+        clicked_img = <video controls autostart autoPlay src={gif} type="video/mp4" />
     } else {
         clicked_img = <img src={img}/>
     }

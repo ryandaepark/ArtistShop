@@ -58,7 +58,7 @@ export default
     img: cover2, 
     gif: gif2,
     title:"Animation Reel", 
-    type: "Gif",
+    type: "Mp4",
     },
     {
     img: cover3, 
@@ -94,7 +94,7 @@ export default
     img: cover8, 
     gif: gif8,
     title:"I am the Void", 
-    type: "Gif",
+    type: "Mp4",
     },
     {
     img: cover9, 
@@ -118,7 +118,7 @@ export default
     img: cover12, 
     gif: gif12,
     title:"One of Those Days", 
-    type: "Gif",
+    type: "Mp4",
     },
     {
     img: cover13, 
