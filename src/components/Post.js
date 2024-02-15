@@ -16,7 +16,7 @@ cursor: pointer;
 
 //Name
 const Name = styled.h2`
-font-size: ${props => props.theme.fontxl};
+font-size: ${props => props.theme.fontlg};
 font-weight: 500;
 display: flex;
 align-items: center;
@@ -96,9 +96,6 @@ export default function Post({title, img, type, gif}) {
             </ImgWrap>
             <Popup open={open} closeOnDocumentClick onClose={closeModal}>
                 <PopupContainer>
-                    <a onClick={closeModal}>
-                        &times;
-                    </a>
                     {clicked_img}
                     <Name> {title} </Name>
                 </PopupContainer>

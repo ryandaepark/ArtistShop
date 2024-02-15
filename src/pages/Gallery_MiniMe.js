@@ -30,6 +30,7 @@ gap: 10px;
 //border-bottom + width : underlines the text 
 const Title = styled.h1`
 font-size: ${(props) => props.theme.fontxxxl};
+font-weight: bold;
 text-transform: uppercase;
 display: flex;
 margin: 1rem auto;

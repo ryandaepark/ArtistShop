@@ -1,9 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import '@fontsource/cedarville-cursive';
-import '@fontsource-variable/montserrat';
-import '@fontsource-variable/caveat'
-import '@fontsource/ibm-plex-mono';
-
 
 const GlobalStyles = createGlobalStyle`
 
@@ -13,7 +8,11 @@ const GlobalStyles = createGlobalStyle`
 }
 
 body{
-    font-family: ftnk;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
     overflow-x: hidden;
 }
 

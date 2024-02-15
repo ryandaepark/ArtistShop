@@ -41,11 +41,6 @@ function App() {
           <Route path="/gallery/minime" element={<MiniMe />} />
           <Route path="/gallery/animations" element={<Animations />} />
           <Route path="/gallery/illustrations" element={<Illustrations />} />
-          {/* <Route path="/login" element={<Login/>} />
-          <Route path="/register" element={<Register/>} /> */}
-          {/* <Route path="/cafes/create" element={<CreatePost/>} />
-          <Route path="/breweries/create" element={<CreatePost/>} /> */}
-          {/* <Route path="/post/:id" element={<PostPage/>} /> */}
         </Routes>
       </Page>
       </ThemeProvider>
