@@ -3,6 +3,7 @@ import { React, useEffect, useState } from "react";
 import testImage from '../RyanAssets/girl.jpg';
 import { Link } from 'react-router-dom';
 import MiniMePanel from '../RyanAssets/Panel-MiniMe.gif';
+import IllustrationPanel from '../RyanAssets/Panel-Illustrations.gif';
 
 //Section
 //First block
@@ -36,19 +37,17 @@ font-weight: bold;
 text-transform: uppercase;
 display: flex;
 margin: 1rem auto;
-padding: 1rem 0;
+padding-top: 1rem;
 border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
 const SubTitle = styled.h3`
 font-size: ${props => props.theme.fontlg};
+font-weight: 600;
 text-transform: capitalize;
 text-align: center;
 color: grey;
-font-weight: 400;
-margin-bottom: 1rem;
-padding-bottom: 2rem;
 `
 
 const GalleryItem = styled.div`
@@ -60,14 +59,15 @@ align-items: center;
 margin: 2rem auto;
 text-align: center;
 font-size: ${(props) => props.theme.fontxxl};
-background-color: pink;
+font-weight: 500;
 color: white;
 background-size: cover;
 background-position: center;
-transition: border 0.3s, padding 0.3s;
+transition: border 0.3s, padding 0.3s, box-shadow 0.3s;
+text-shadow: -2px -2px 0 #73ad21, 2px -2px 0 #73ad21, -2px 2px 0 #73ad21, 2px 2px 0 #73ad21;
 
 :hover{
-  border: 5px solid rgba(115, 173, 33, 0.8);
+  box-shadow: 0 0 40px 5px #73ad21;
   padding-bottom: 1rem;
 }
 `
@@ -77,7 +77,7 @@ background-image: url(${MiniMePanel})
 `
 
 const Panel2 = styled(GalleryItem)`
-background-image: url(${testImage})
+background-image: url(${IllustrationPanel})
 `
 
 const Panel3 = styled(GalleryItem)`
@@ -89,7 +89,7 @@ const Gallery = () => {
   return (
     <Section>
     <Title> Gallery </Title>
-    <SubTitle> A compilation of works dating from 2020 - present </SubTitle>
+    <SubTitle> 2020 - 2024 </SubTitle>
       <Container>
         <Link to="/gallery/minime"> 
           <Panel1> Mini Me </Panel1>

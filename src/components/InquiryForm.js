@@ -7,24 +7,23 @@ const Title = styled.h1`
 font-size: ${(props) => props.theme.fontxl};
 text-transform: capitalize;
 display: flex;
-border-bottom: 2px solid #73AD21;
 `
 
 const Container = styled.div`
 width: 70%;
 margin: 0 auto;
 border-radius: 10px;
-border: 2px solid #73AD21;
 display: flex-column;
 align-items: center;
 justify-content: center;
 text-align: center;
+box-shadow: 0 0 50px 5px #1976D2;
 `
 
 const ConfirmationPost = styled.div`
 text-align: center;
 font-size: ${(props) => props.theme.fontxl};
-width: 60%;
+width: 70%;
 margin: 0 auto;
 padding-top: 1rem;
 `
@@ -84,7 +83,7 @@ const CreatePost = () => {
         <>
           <ConfirmationPost> Thank you for your request! I will get back to you as soon as possible. </ConfirmationPost>
           <button 
-            class="m-3 p-2.5 bg-transparent hover:bg-green-700 text-green-700 font-semibold hover:text-white border rounded"
+            class="m-3 p-2.5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick = {() => setEmailed(!emailed)}
           > 
             Click here to resubmit commision request.

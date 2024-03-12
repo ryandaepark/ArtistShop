@@ -22,6 +22,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 padding-top: 1rem;
+`   
+
+const Year = styled.h2`
+font-size: ${props => props.theme.fontmd};
+font-weight: 400;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-top: 1rem;
 `
 
 const PopupContainer = styled.div`
@@ -74,7 +83,7 @@ opacity: 1;
 }
 `
 
-export default function Post({title, img, type, gif}) {
+export default function Post({title, img, type, gif, year}) {
     const [open, setOpen] = useState(false);
     const closeModal = () => setOpen(false);
     
@@ -98,6 +107,7 @@ export default function Post({title, img, type, gif}) {
                 <PopupContainer>
                     {clicked_img}
                     <Name> {title} </Name>
+                    <Year> {year} </Year>
                 </PopupContainer>
             </Popup>
         </Item>
