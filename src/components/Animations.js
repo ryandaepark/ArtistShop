@@ -88,7 +88,7 @@ export default
     gif: gif6,
     title:"Game of Life", 
     type: "Gif",
-    year: "MISSING",
+    year: "2023",
     },
     {
     img: cover7, 
@@ -123,14 +123,14 @@ export default
     gif: gif11,
     title:"Let Go", 
     type: "Gif",
-    year: "MISSING",
+    year: "2022",
     },
     {
     img: cover12, 
     gif: gif12,
     title:"One of Those Days", 
     type: "Mp4",
-    year: "MISSING",
+    year: "2021",
     },
     {
     img: cover13, 
