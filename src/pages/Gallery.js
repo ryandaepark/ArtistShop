@@ -4,6 +4,7 @@ import testImage from '../RyanAssets/girl.jpg';
 import { Link } from 'react-router-dom';
 import MiniMePanel from '../RyanAssets/Panel-MiniMe.gif';
 import IllustrationPanel from '../RyanAssets/Panel-Illustrations.gif';
+import AnimationsPanel from '../RyanAssets/Panel-Animations.GIF'
 
 //Section
 //First block
@@ -81,7 +82,7 @@ background-image: url(${IllustrationPanel})
 `
 
 const Panel3 = styled(GalleryItem)`
-background-image: url(${testImage})
+background-image: url(${AnimationsPanel})
 `
 
 const Gallery = () => {
