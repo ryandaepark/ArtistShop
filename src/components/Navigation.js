@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { React, useContext, useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
-import solarLogo from "../RyanAssets/solarlogo.png";
+import solarLogo from "../RyanAssets/MainLogo.PNG";
 import x from "../RyanAssets/x_logo.png";
 import instagram from "../RyanAssets/insta_logo.png";
 
@@ -95,13 +95,19 @@ a:hover .subitem{
 }
 `
 
-
+const LogoContainer = styled.div`
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 3rem;
+`
 
 const Navigation = () => {
     return (
         <Section>
             <NavBar>
-                <img class="main" src={solarLogo}/>
+                <LogoContainer>
+                    <img class="main" src={solarLogo}/>
+                </LogoContainer>
                 <Menu>
                     <Link to="/"> 
                     <MenuItem>Home</MenuItem>
