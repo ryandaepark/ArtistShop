@@ -20,7 +20,7 @@ margin: auto;
 const ContentContainer = styled.div`
 margin: 6rem auto;
 width: 65%;
-display: flex;
+display: flex; 
 `
 
 const TextBlock = styled.section`
@@ -62,7 +62,7 @@ const AboutMe = () => {
 
     <ContentContainer>
       <img src={mainLogo} class="w-80"/>
-      <TextBlock> Solar Broccoli is an artist based in Los Angeles, California. <br/><br/> 
+      <TextBlock> SolarBroccoli is an artist based in Los Angeles, California. <br/><br/> 
        SolarBroccoli uses  illustrative and animated works by mixing digital and traditional mediums to create pieces that speak to his daily thoughts, feelings, and influences. He enjoys celebrating many of his influences within pop culture. <br/> <br/>
        Enjoy, <br/> SolarBrocolli </TextBlock> 
     </ContentContainer>
