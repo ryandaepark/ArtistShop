@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { React, useContext, useEffect, useState } from "react";
+import { React } from "react";
 import { Link } from 'react-router-dom';
 import solarLogo from "../RyanAssets/MainLogo.PNG";
 import x from "../RyanAssets/x_logo.png";

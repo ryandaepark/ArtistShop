@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { React, useEffect, useState } from "react";
-import testImage from '../RyanAssets/girl.jpg';
+import { React } from "react";
 import { Link } from 'react-router-dom';
 import MiniMePanel from '../RyanAssets/Panel-MiniMe.gif';
 import IllustrationPanel from '../RyanAssets/Panel-Illustrations.gif';
