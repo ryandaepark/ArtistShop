@@ -1,8 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import linkedIn from '../RyanAssets/LI-In-Bug.png'
-import mainLogo from '../RyanAssets/Cover.png'
+import mainLogo from '../RyanAssets/AboutMePic.JPG'
 
 //Section
 const Section = styled.section`
@@ -11,17 +9,24 @@ margin-top: 2rem;
 `
 
 const Container = styled.div`
-flex-direction: column;
-display: flex;
-min-height: 80vh;
+display: flex-column;
 justify-content: center;
 align-items: center;
+text-align: center;
+margin: auto;
+`
+
+
+const ContentContainer = styled.div`
+margin: 6rem auto;
+width: 65%;
+display: flex;
 `
 
 const TextBlock = styled.section`
-margin: 0 10rem 1rem;
-text-align: center;
+margin: auto;
 width: 50%;
+height: 70%;
 `
 
 //Title
@@ -53,16 +58,15 @@ const AboutMe = () => {
     <Container>
     <Title> About Me </Title>
     <SubTitle> My inspiration, my work, and credits </SubTitle>
-      <img src={mainLogo} class="w-80"/>
-      <TextBlock>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt consequatur quisquam maxime molestias dolores ipsum, exercitationem vel sint quidem aliquam modi quis impedit corporis unde inventore fugiat provident in.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt consequatur quisquam maxime molestias dolores ipsum, exercitationem vel sint quidem aliquam modi quis impedit corporis unde inventore fugiat provident in.
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore deserunt consequatur quisquam maxime molestias dolores ipsum, exercitationem vel sint quidem aliquam modi quis impedit corporis unde inventore fugiat provident in.
-      </TextBlock>
-      <TextBlock> Enjoy! </TextBlock>
-      <TextBlock> SolarBrocolli </TextBlock>
-      <Link> <img src={linkedIn} class="w-12"/> </Link>
     </Container>
+
+    <ContentContainer>
+      <img src={mainLogo} class="w-80"/>
+      <TextBlock> Solar Broccoli is an artist based in Los Angeles, California. <br/><br/> 
+       SolarBroccoli uses  illustrative and animated works by mixing digital and traditional mediums to create pieces that speak to his daily thoughts, feelings, and influences. He enjoys celebrating many of his influences within pop culture. <br/> <br/>
+       Enjoy, <br/> SolarBrocolli </TextBlock> 
+    </ContentContainer>
+    
     </Section>
   )
 } 
