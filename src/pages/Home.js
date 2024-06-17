@@ -1,7 +1,6 @@
 import { React } from "react";
 import styled from 'styled-components'
-import TypeWriterText from '../components/TypeWriterText'
-import backdrop from '../RyanAssets/backdrop.png';
+import MainPanel from '../RyanAssets/MainPage.gif'
 
 //Section
 //min-height : This is calculating spacing per window size before scroll
@@ -20,16 +19,12 @@ margin-top: 5%;
 //justify-content: center: makes it centered horizontally
 //align-items: center: makes it centered vertically
 const Container = styled.div`
-min-height: 80vh;
 display: flex-column;
 justify-content: center;
 align-items: center;
 text-align: center;
-margin: auto;
-width: 50%;
-padding-top: 16%;
-
-background-image: url(${backdrop});
+margin: 0 auto;
+padding: 2rem;
 background-position: center;
 `
 
@@ -37,7 +32,7 @@ const Home = () => {
   return (
     <Section>
       <Container>
-        <TypeWriterText />
+      <img src={MainPanel}/>
       </Container>
     </Section>
   )
