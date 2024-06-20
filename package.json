@@ -1,7 +1,7 @@
 {
   "name": "cafe-blog",
   "version": "0.1.0",
-  "homepage": "https://ryandaepark.github/io/artist-shop",
+  "homepage": "https://ryandaepark.github.io/ArtistShop/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
