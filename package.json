@@ -1,7 +1,7 @@
 {
   "name": "artist-shop",
   "version": "0.1.0",
-  "homepage": "https://ryandaepark.github.io/ArtistShop/",
+  "homepage": "https://ryandaepark.github.io/ArtistShop/build",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
