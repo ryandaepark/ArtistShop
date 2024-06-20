@@ -52,7 +52,16 @@ text-align: center;
 font-size: ${props => props.theme.fontxl};
 `
 
+const Container = styled.div`
+text-align: center;
+font-size: ${(props) => props.theme.fontxl};
+width: 50%;
+margin: 0 auto;
+padding-top: 1rem;
+`
 
+
+//Inquiry Form works but for security reasons will be disconnected from Emailer for public site
 const Commissions = () => {
   return (
     <Section>
@@ -67,7 +76,10 @@ const Commissions = () => {
         <img src={ex_animated} /> 
       </Example>
     </ExamplesBlock>
-    <InquiryForm/>
+    <Container>
+      DM on X or Instagram to Request Commissions
+    </Container>
+    {/* <InquiryForm/> */}
     </Section>
   )
 }
