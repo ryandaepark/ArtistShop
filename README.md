@@ -36,6 +36,8 @@ Open the project here: </br>
 <b> Note: The "Usage Section" images are outdated </b> 
 </br>
 <b> Note: Only works on "Web Browser" </b> 
+</br>
+<b> Note: After external link, cannot return to page </b> 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -124,6 +126,7 @@ The commissions page handles inquiries with cost breakdown of each piece. It is 
 
 - [ ] Reapply Emailer.js when more secure
 - [ ] Make Responsive on Phones
+- [ ] External link will not allow you to revert back to page
 
 <!-- DISCLAIMER -->
 ## Disclaimer
