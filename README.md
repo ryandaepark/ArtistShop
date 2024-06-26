@@ -7,6 +7,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
+      <a href="#project-link">Project Link</a>
+    </li>
+    <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
@@ -15,8 +18,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
       </ul>
     </li>
@@ -25,12 +26,18 @@
   </ol>
 </details>
 
+<!-- PROJECT LINK -->
+## Project Link
+Open the project here: </br>
+[(https://ryandaepark.github.io/ArtistShop/)]
+
+</br></br>
+<b>Note: The "Usage Section" images are outdated</b>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 I created this website template for SolarBroccoli as an artist portfolio page. I created it customly to showcase his work in a way that emphasizes his art pieces. They include features like natural UI elements, pinterest-style gallery, and emailer for commision requests. The technical aspects of the browser were done by me with small artwork samples by SolarBroccoli. 
-
 
 ### Built With
 
@@ -42,8 +49,8 @@ I created this website template for SolarBroccoli as an artist portfolio page. I
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### Prerequisites
-These are the necessary npm packages that need to be downloaded.
+### Npm Packages
+These are the necessary npm packages that were used
 
 * npm
   ```sh
@@ -61,17 +68,6 @@ These are the necessary npm packages that need to be downloaded.
   ```sh
   npm install typewriter-effect
   ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/ArtistShop.git
-   ```
-2. Start NPM project
-   ```sh
-   npm start
-   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -116,16 +112,16 @@ The commissions page handles inquiries with cost breakdown of each piece. It is 
 - [X] Create different template styles for gallery subsections
 - [X] Sift through artworks and make sure in correct section
 - [X] Add links to instagram and twitter below the about me
+- [X] Receive all works from artist
+- [X] Have artist design animation for gallery buttons 200x800px  + home page animations
+- [X] Improve homepage using animation work from artist 
+- [X] Add links to twitter + instagram
+- [X] Gif static until pressed
+- [X] Link to shop + add new page for shop
 
-- [ ] Receive all works from artist
-- [ ] Have artist design animation for gallery buttons 200x800px  + home page animations
-- [ ] Improve homepage using animation work from artist 
-- [ ] Add links to twitter + instagram
-- [ ] Gif static until pressed
-- [ ] Link to shop + add new page for shop
+- [ ] Reapply Emailer.js when more secure
 
 <!-- DISCLAIMER -->
 ## Disclaimer
-All artworks are sample images from a free png site. </br>
-The images in the commissions tab, the logo, and the graphic in the first homepage are owned by SolarBroccoli. 
+All images and animations are owned and created by SolarBrocolli. 
 
