@@ -28,11 +28,10 @@
 
 <!-- PROJECT LINK -->
 ## Project Link
+<b> Note: The "Usage Section" images are outdated </b> </br>
+<b> Note: Only works on "Web Browser" </b> </br>
 Open the project here: </br>
 [(https://ryandaepark.github.io/ArtistShop/)]
-
-</br></br>
-<b>Note: The "Usage Section" images are outdated</b>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -120,6 +119,7 @@ The commissions page handles inquiries with cost breakdown of each piece. It is 
 - [X] Link to shop + add new page for shop
 
 - [ ] Reapply Emailer.js when more secure
+- [ ] Make Responsive on Phones
 
 <!-- DISCLAIMER -->
 ## Disclaimer
