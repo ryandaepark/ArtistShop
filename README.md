@@ -28,10 +28,14 @@
 
 <!-- PROJECT LINK -->
 ## Project Link
-<b> Note: The "Usage Section" images are outdated </b> </br>
-<b> Note: Only works on "Web Browser" </b> </br>
+
 Open the project here: </br>
 [(https://ryandaepark.github.io/ArtistShop/)]
+
+</br>
+<b> Note: The "Usage Section" images are outdated </b> 
+</br>
+<b> Note: Only works on "Web Browser" </b> 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
