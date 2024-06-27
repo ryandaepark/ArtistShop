@@ -42,29 +42,21 @@ border-bottom: 2px solid ${(props) => props.theme.body};
 width: fit-content;
 `
 
-const SubTitle = styled.h3`
-font-size: ${props => props.theme.fontlg};
-text-transform: capitalize;
-text-align: center;
-color: grey;
-font-weight: 400;
-margin-bottom: 1rem;
-padding-bottom: 2rem;
-`
+
 
 const AboutMe = () => {
   return (
     <Section>
     <Container>
     <Title> About Me </Title>
-    <SubTitle> My inspiration, my work, and credits </SubTitle>
     </Container>
 
     <ContentContainer>
       <img src={mainLogo} class="w-80"/>
-      <TextBlock> SolarBroccoli is an artist based in Los Angeles, California. <br/><br/> 
-       SolarBroccoli uses  illustrative and animated works by mixing digital and traditional mediums to create pieces that speak to his daily thoughts, feelings, and influences. He enjoys celebrating many of his influences within pop culture. <br/> <br/>
-       Enjoy, <br/> SolarBrocolli </TextBlock> 
+      <TextBlock> 
+        SolarBroccoli is an artist based in Southern California. <br/><br/> 
+        Solar utilizes illustration and animation to create pieces tha speak to his daily thoughts, feelings, and experiences. Many of his influences are shown through these mediums as a form of "fanart" to celebrate the media that shaped his tastes. <br/> <br/>
+      </TextBlock> 
     </ContentContainer>
     
     </Section>
