@@ -33,11 +33,9 @@ Open the project here: </br>
 [(https://ryandaepark.github.io/ArtistShop/)]
 
 </br>
-<b> Note: The "Usage Section" images are outdated </b> 
-</br>
 <b> Note: Only works on "Web Browser" </b> 
 </br>
-<b> Note: After external link, cannot return to page </b> 
+<b> Note: After external link, cannot return to root page </b> 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
