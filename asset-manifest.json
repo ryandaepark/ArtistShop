@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ArtistShop/static/css/main.54f9f698.css",
-    "main.js": "/ArtistShop/static/js/main.f92c7170.js",
+    "main.js": "/ArtistShop/static/js/main.ee4d9d60.js",
     "static/media/I Am The Void 2022.mp4": "/ArtistShop/static/media/I Am The Void 2022.ffd34493bc1b4fec9e76.mp4",
     "static/media/Let Go.gif": "/ArtistShop/static/media/Let Go.1f6b4214041681379ca2.gif",
     "static/media/One Of Those Days.mp4": "/ArtistShop/static/media/One Of Those Days.da92d9969560f2af1c92.mp4",
@@ -82,10 +82,10 @@
     "static/media/Adventure Time Cover.png": "/ArtistShop/static/media/Adventure Time Cover.01429b62cd38c7ff16fd.png",
     "index.html": "/ArtistShop/index.html",
     "main.54f9f698.css.map": "/ArtistShop/static/css/main.54f9f698.css.map",
-    "main.f92c7170.js.map": "/ArtistShop/static/js/main.f92c7170.js.map"
+    "main.ee4d9d60.js.map": "/ArtistShop/static/js/main.ee4d9d60.js.map"
   },
   "entrypoints": [
     "static/css/main.54f9f698.css",
-    "static/js/main.f92c7170.js"
+    "static/js/main.ee4d9d60.js"
   ]
 }
