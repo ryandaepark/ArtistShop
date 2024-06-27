@@ -33,14 +33,14 @@ function App() {
       <Page>
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path= "/gallery" element={<Gallery />} />
-          <Route path= "/commissions" element={<Commissions />} />
-          <Route path= "/shop" element={<Shop />} />
-          <Route path="/aboutme" element={<AboutMe />} />
-          <Route path="/gallery/minime" element={<MiniMe />} />
-          <Route path="/gallery/animations" element={<Animations />} />
-          <Route path="/gallery/illustrations" element={<Illustrations />} />
+          <Route path="/ArtistShop" element={<Home />} />
+          <Route path= "/ArtistShop/gallery" element={<Gallery />} />
+          <Route path= "/ArtistShop/commissions" element={<Commissions />} />
+          <Route path= "/ArtistShop/shop" element={<Shop />} />
+          <Route path="/ArtistShop/aboutme" element={<AboutMe />} />
+          <Route path="/ArtistShop/gallery/minime" element={<MiniMe />} />
+          <Route path="/ArtistShop/gallery/animations" element={<Animations />} />
+          <Route path="/ArtistShop/gallery/illustrations" element={<Illustrations />} />
         </Routes>
       </Page>
       </ThemeProvider>

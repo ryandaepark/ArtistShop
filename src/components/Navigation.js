@@ -109,38 +109,38 @@ const Navigation = () => {
                     <img class="main" src={solarLogo}/>
                 </LogoContainer>
                 <Menu>
-                    <Link to="/"> 
+                    <Link to="/ArtistShop"> 
                     <MenuItem>Home</MenuItem>
                     </Link>
 
                     <DropDown>
-                        <Link to="/gallery"> 
+                        <Link to="/ArtistShop/gallery"> 
                         <MenuItem>Gallery</MenuItem>
                         </Link>
                         <div class="content">
-                            <Link to="/gallery/minime"> 
+                            <Link to="/ArtistShop/gallery/minime"> 
                             <a class="subitem"> Mini Me </a>
                             </Link>
 
-                            <Link to="/gallery/illustrations"> 
+                            <Link to="/ArtistShop/gallery/illustrations"> 
                             <a class="subitem"> Illustrations </a>
                             </Link>
 
-                            <Link to="/gallery/animations"> 
+                            <Link to="/ArtistShop/gallery/animations"> 
                             <a class="subitem"> Animations </a>
                             </Link>
                         </div>
                     </DropDown>
 
-                    <Link to="/commissions"> 
+                    <Link to="/ArtistShop/commissions"> 
                     <MenuItem>Commissions</MenuItem>
                     </Link>
 
-                    <Link to="/shop"> 
+                    <Link to="/ArtistShop/shop"> 
                     <MenuItem>Shop</MenuItem>
                     </Link>
 
-                    <Link to="/aboutme"> 
+                    <Link to="/ArtistShop/aboutme"> 
                     <MenuItem>About Me</MenuItem>
                     </Link>
                     <a href="https://twitter.com/solarbroccoli"> <img class="sub" src={x}/> </a>
