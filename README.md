@@ -126,7 +126,7 @@ The commissions page handles inquiries with cost breakdown of each piece. It is 
 
 - [ ] Reapply Emailer.js when more secure
 - [ ] Make Responsive on Phones
-- [ ] External link will not allow you to revert back to page
+- [ ] External link will not allow you to revert back to root pages (index.html?)
 
 <!-- DISCLAIMER -->
 ## Disclaimer
